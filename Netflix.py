@@ -48,6 +48,13 @@ YEAR_OF_RATING = create_cache("cache-yearCustomerRatedMovie.pickle")
 CUSTOMER_AVERAGE_RATING_YEARLY = create_cache(
     "cache-customerAverageRatingByYear.pickle")
 
+#A dictionary that takes a decade as 1890, 1900, 1910... up to 2000 (int) and returns the average rating for the decade 
+#(float). There is an entry which is -1 because the year of a movie was NULL in the file NetflixYearAvgNum.txt. Inputing
+# -1 as a decade still returns the average rating.
+# avgDecades = {decade : rating,}
+AVERAGE_MOVIE_RATING_BY_DECADE = create_cache(
+    "lls2395-decade_avg_rating.pickle")
+
 
 '''
 #actual_scores_cache = {10040: {2417853: 1, 1207062: 2, 2487973: 3}}
