@@ -111,19 +111,20 @@ def netflix_eval(reader, writer) :
             # pred = movie_year_cache[int(current_movie)]
             # pred = (pred // 10) *10
             # prediction = decade_avg_cache[pred]
-            # writer.write(line)
-            # writer.write('\n')
-            # current_movie = line.rstrip(':')
+            writer.write(line)
+            writer.write('\n')
+            prediction = AVERAGE_RATING
+
         else:
 		# It's a customer
             # current_customer = line
             # predictions.append(prediction)
             # actual.append(actual_scores_cache[int(current_movie)][int(current_customer)])
-            # writer.write(str(prediction)) 
-            # writer.write('\n')
+            writer.write(str(prediction)) 
+            writer.write('\n')
             current_customer = line
             actual.append(ACTUAL_CUSTOMER_RATING[(int(current_customer), movie)])
-            predictions.append(AVERAGE_RATING)	
+            predictions.append(prediction)	
     # calculate rmse for predications and actuals
     rmse = sqrt(mean(square(subtract(predictions, actual))))
     writer.write(str(rmse)[:4] + '\n')
