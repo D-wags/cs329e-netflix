@@ -31,5 +31,3 @@ if __name__ == "__main__":
 % pydoc3 -w Netflix
 # That creates the file Collatz.html
 """
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help

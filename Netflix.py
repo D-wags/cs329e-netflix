@@ -33,6 +33,18 @@ def create_cache(filename):
 
 AVERAGE_RATING = 3.60428996442
 
+# {userId:offset value,....}
+USER_OFFSET = create_cache(
+    "amm7366-rs45899-customerAverageOffset.pickle")
+
+#{userID: average rating}
+AVERAGE_CUSTOMER_RATING = create_cache(
+    "cache-averageCustomerRating.pickle")
+
+# {movieid:average movie rating,...}
+AVERAGE_MOVIE_RATING = create_cache(
+    "cache-averageMovieRating.pickle")
+
 #This is a dictionary of (customer_id, movie_id) as keys (int, int) and their actual rating as values (int
 ACTUAL_CUSTOMER_RATING = create_cache(
     "cache-actualCustomerRating.pickle")
@@ -56,7 +68,7 @@ AVERAGE_MOVIE_RATING_BY_DECADE = create_cache(
     "lls2395-decade_avg_rating.pickle")
 
 
-'''
+
 #actual_scores_cache = {10040: {2417853: 1, 1207062: 2, 2487973: 3}}
 actual_scores_cache = {}
 cust_id_rating = {}
@@ -66,8 +78,8 @@ for item in ACTUAL_CUSTOMER_RATING.items():
     rating = item[1]
     cust_id_rating[customer_id] = rating 
     actual_scores_cache[movie_id] = cust_id_rating
-print(actual_scores_cache)
 
+'''
 #movie_year_cache = {10040: 1990}
 movie_year_cache = {}
 for item in AVERAGE_MOVIE_RATING_PER_YEAR.items():
@@ -104,7 +116,7 @@ def netflix_eval(reader, writer) :
     predictions = []
     actual = []
 
-    AVERAGE_RATING = 3.60428996442
+    #AVERAGE_RATING = 3.60428996442
 
     # iterate throught the file reader line by line
     for line in reader:
@@ -112,26 +124,30 @@ def netflix_eval(reader, writer) :
         line = line.strip()
         # check if the line ends with a ":", i.e., it's a movie title 
         if line[-1] == ':':
-            movie = int(line.rstrip(':'))
+            #movie = int(line.rstrip(':'))
 		# It's a movie
-            # current_movie = line.rstrip(':')
-            # pred = movie_year_cache[int(current_movie)]
-            # pred = (pred // 10) *10
-            # prediction = decade_avg_cache[pred]
+            current_movie = line.rstrip(':')
+            pred = AVERAGE_MOVIE_RATING[int(current_movie)]
+            #pred = (pred // 10) *10
+            #prediction = AVERAGE_MOVIE_RATING_BY_DECADE[pred]
             writer.write(line)
             writer.write('\n')
-            prediction = AVERAGE_RATING
+            
 
         else:
 		# It's a customer
-            # current_customer = line
             # predictions.append(prediction)
             # actual.append(actual_scores_cache[int(current_movie)][int(current_customer)])
+            #writer.write(str(prediction)) 
+            #writer.write('\n')
+            current_customer = line
+            offset = USER_OFFSET[int(current_customer)]
+            prediction = pred + offset
+            predictions.append(prediction)
+            actual.append(actual_scores_cache[int(current_movie)][int(current_customer)])
+            
             writer.write(str(prediction)) 
             writer.write('\n')
-            current_customer = line
-            actual.append(ACTUAL_CUSTOMER_RATING[(int(current_customer), movie)])
-            predictions.append(prediction)	
     # calculate rmse for predications and actuals
     rmse = sqrt(mean(square(subtract(predictions, actual))))
     writer.write(str(rmse)[:4] + '\n')
