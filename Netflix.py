@@ -88,7 +88,6 @@ for item in AVERAGE_MOVIE_RATING_PER_YEAR.items():
     rating = item[1]
     movie_year_cache[movie_id] = year
 print(movie_year_cache)
-
 decade_avg_cache = {1990: 2.5, 2000: 2.6}
 decade_avg_cache = {}
 decade_ratings = {199: [], 200: []}
@@ -101,7 +100,6 @@ for movie in actual_scores_cache:
                 for user_id in actual_scores_cache[movie]:
                     a_films_ratings.append(actual_scores_cache[movie][user_id])
                 decade_ratings[year].append(a_films_ratings)
-
 print(decade_ratings)
 '''
 
@@ -125,7 +123,7 @@ def netflix_eval(reader, writer) :
         # check if the line ends with a ":", i.e., it's a movie title 
         if line[-1] == ':':
             #movie = int(line.rstrip(':'))
-		# It's a movie
+        # It's a movie
             current_movie = line.rstrip(':')
             pred = AVERAGE_MOVIE_RATING[int(current_movie)]
             #pred = (pred // 10) *10
@@ -135,7 +133,7 @@ def netflix_eval(reader, writer) :
             
 
         else:
-		# It's a customer
+        # It's a customer
             # predictions.append(prediction)
             # actual.append(actual_scores_cache[int(current_movie)][int(current_customer)])
             #writer.write(str(prediction)) 
@@ -143,12 +141,13 @@ def netflix_eval(reader, writer) :
             current_customer = line
             offset = USER_OFFSET[int(current_customer)]
             prediction = pred + offset
+            prediction = round(prediction, 1)
             predictions.append(prediction)
             actual.append(actual_scores_cache[int(current_movie)][int(current_customer)])
             
             writer.write(str(prediction)) 
             writer.write('\n')
+
     # calculate rmse for predications and actuals
     rmse = sqrt(mean(square(subtract(predictions, actual))))
     writer.write(str(rmse)[:4] + '\n')
-
