@@ -48,24 +48,28 @@ for item in test_cache:
 # writer = sys.stdin
 
 writer = open("RunNetflix.in", 'w')
+count = 0
 for item in new_dict:
-	writer.write(str(item) + ":")
-	writer.write('\n')
-
-	writer.write(str(new_dict[item][0]))
-	writer.write('\n')
-
-	if len(new_dict[item]) > 1:
-		writer.write(str(new_dict[item][1]))
+	if count < 492:
+		writer.write(str(item) + ":")
+		writer.write('\n')
+		writer.write(str(new_dict[item][0]))
 		writer.write('\n')
 
-	if len(new_dict[item]) > 2:
-		writer.write(str(new_dict[item][2]))
-		writer.write('\n')
+		if len(new_dict[item]) > 1:
+			writer.write(str(new_dict[item][1]))
+			writer.write('\n')
 
-	if len(new_dict[item]) > 3:
-		writer.write(str(new_dict[item][3]))
-		writer.write('\n')
+		if len(new_dict[item]) > 2:
+			writer.write(str(new_dict[item][2]))
+			writer.write('\n')
+
+		if len(new_dict[item]) > 3:
+			writer.write(str(new_dict[item][3]))
+			writer.write('\n')
+	else:
+		break
+	count += 1
 	
 
 writer.close()
