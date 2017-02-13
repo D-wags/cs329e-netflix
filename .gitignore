@@ -1,3 +1,7 @@
-__pycache
+__pycache__
 netflix-tests
 .coverage
+RunNetflix2.in
+RunNetflix2.out
+get_accepts.py
+probe.txt
