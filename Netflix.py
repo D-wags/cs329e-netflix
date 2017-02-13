@@ -79,6 +79,33 @@ for item in ACTUAL_CUSTOMER_RATING.items():
     cust_id_rating[customer_id] = rating 
     actual_scores_cache[movie_id] = cust_id_rating
 
+<<<<<<< HEAD
+=======
+'''
+#movie_year_cache = {10040: 1990}
+movie_year_cache = {}
+for item in AVERAGE_MOVIE_RATING_PER_YEAR.items():
+    movie_id = item[0][0]
+    year = item[0][1]
+    rating = item[1]
+    movie_year_cache[movie_id] = year
+print(movie_year_cache)
+
+decade_avg_cache = {1990: 2.5, 2000: 2.6}
+decade_avg_cache = {}
+decade_ratings = {199: [], 200: []}
+for movie in actual_scores_cache:
+    for film in movie_year_cache:
+        if movie == film:
+            year = (movie_year_cache[film] // 10)
+            if year in decade_ratings:
+                a_films_ratings = []
+                for user_id in actual_scores_cache[movie]:
+                    a_films_ratings.append(actual_scores_cache[movie][user_id])
+                decade_ratings[year].append(a_films_ratings)
+
+print(decade_ratings)
+>>>>>>> origin/dev
 '''
 #movie_year_cache = {10040: 1990}
 movie_year_cache = {}
@@ -105,6 +132,11 @@ print(decade_ratings)
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/dev
 
 # ------------
 # netflix_eval
@@ -123,7 +155,11 @@ def netflix_eval(reader, writer) :
         # check if the line ends with a ":", i.e., it's a movie title 
         if line[-1] == ':':
             #movie = int(line.rstrip(':'))
+<<<<<<< HEAD
         # It's a movie
+=======
+		# It's a movie
+>>>>>>> origin/dev
             current_movie = line.rstrip(':')
             pred = AVERAGE_MOVIE_RATING[int(current_movie)]
             #pred = (pred // 10) *10
@@ -133,7 +169,11 @@ def netflix_eval(reader, writer) :
             
 
         else:
+<<<<<<< HEAD
         # It's a customer
+=======
+		# It's a customer
+>>>>>>> origin/dev
             # predictions.append(prediction)
             # actual.append(actual_scores_cache[int(current_movie)][int(current_customer)])
             #writer.write(str(prediction)) 
