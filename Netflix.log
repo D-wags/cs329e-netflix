@@ -1,3 +1,159 @@
+commit f59c28acb654ff918ff29bf49ef026191b60497a
+Author: Ellen Wyllie <ellen@cs.utexas.edu>
+Date:   Wed Feb 15 15:03:34 2017 -0600
+
+    Upload Netflix.html
+
+commit 59ccbb75ca31a7fa853c0254b3b1db8e65043386
+Author: Ellen Wyllie <ellen@cs.utexas.edu>
+Date:   Mon Feb 13 17:18:56 2017 -0600
+
+    Make travis work
+
+commit 647bd32255c0ea9c4fc5cb786c4c3f4e1fbea2b9
+Merge: 2eac475 0fa9239
+Author: Ellen Wyllie <ellen@cs.utexas.edu>
+Date:   Mon Feb 13 17:14:37 2017 -0600
+
+    test 1,2
+
+commit 2eac47599324947fbcd536f53227ad322aeb3ae7
+Author: Ellen Wyllie <ellen@cs.utexas.edu>
+Date:   Mon Feb 13 17:09:19 2017 -0600
+
+    Make travis work
+
+commit 0fa923947e13f0a85ad7cf44759a615231c9580d
+Author: ellenwyllie <ellen.wyllie@gmail.com>
+Date:   Mon Feb 13 16:52:23 2017 -0600
+
+    Delete RunNetflix.tmp
+
+commit da455bac8eec801a626ebdeeed3fb3fc48d30ef8
+Author: ellenwyllie <ellen.wyllie@gmail.com>
+Date:   Mon Feb 13 16:52:14 2017 -0600
+
+    Delete get_accepts.py
+
+commit 63e42b0753f453b1aa9f41c2612abb6b8141f530
+Author: ellenwyllie <ellen.wyllie@gmail.com>
+Date:   Mon Feb 13 16:52:03 2017 -0600
+
+    Delete RunNetflix2.out
+
+commit c0399a006d5e2ad518171ed296da312afb1bd75f
+Author: ellenwyllie <ellen.wyllie@gmail.com>
+Date:   Mon Feb 13 16:51:53 2017 -0600
+
+    Delete RunNetflix2.in
+
+commit c63210d399698b6e325f08ad6ff070cb7404ac95
+Author: ellenwyllie <ellen.wyllie@gmail.com>
+Date:   Mon Feb 13 16:51:30 2017 -0600
+
+    Delete Netflix.cpython-35.pyc
+
+commit bf84e033a045aa97542b05a239c833cd0e2ca0c7
+Author: ellenwyllie <ellen.wyllie@gmail.com>
+Date:   Mon Feb 13 16:50:59 2017 -0600
+
+    Delete TestNetflix.tmp
+
+commit 20983ad8ab294ee11b9bf698d43565c8daf4ee28
+Author: ellenwyllie <ellen.wyllie@gmail.com>
+Date:   Mon Feb 13 16:50:26 2017 -0600
+
+    Delete probe.txt
+
+commit 462da798d5e6b631b2af446f33b45dd4f4a9a785
+Author: Ellen Wyllie <ellen@cs.utexas.edu>
+Date:   Mon Feb 13 16:43:55 2017 -0600
+
+    Cleaned up Netflix.py, updated acceptance tests
+
+commit 941df4968062620aaaa6141beabafa62f3312066
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Mon Feb 13 16:36:21 2017 -0600
+
+    new acceptance tests
+
+commit c8ff3b7da970303db60ccd98a6b36d31bfe7b3ab
+Merge: 9e11ba2 05b4cd6
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Mon Feb 13 16:03:48 2017 -0600
+
+    Merge remote-tracking branch 'origin/dev' into new_master
+    
+    # Conflicts:
+    #       Netflix.py
+
+commit 9e11ba23485bde2716b5ba6c842826cd23663bd5
+Merge: 80ed1ed 28d0ff2
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sat Feb 11 19:29:47 2017 -0600
+
+    Merge branch 'master' into dev
+
+commit 28d0ff2c562b8fccb5eeed44a65b3ca661eada3b
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sat Feb 11 19:28:52 2017 -0600
+
+    more rounding
+
+commit 05b4cd672fd06094539c04ec15e97289fd4c1859
+Author: Ellen Wyllie <ellen@cs.utexas.edu>
+Date:   Sat Feb 11 19:26:44 2017 -0600
+
+    update Netflix.py to round numbers
+
+commit 3fb0aa7335b249a6545319b18007227ace0421fa
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sat Feb 11 19:18:49 2017 -0600
+
+    Added Unit Tests
+
+commit ab330c2c679aa3260a31e1b011646c073da19377
+Author: Ellen Wyllie <ellen@cs.utexas.edu>
+Date:   Sat Feb 11 18:22:22 2017 -0600
+
+    added probe.txt
+
+commit addeb2c83c41ba2312678bbe8e0f976ff271356e
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sat Feb 11 18:19:40 2017 -0600
+
+    Fixed up Netflix_eval
+
+commit 65cca3d31fc88a34c171021505e485e4e5e369ba
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sat Feb 11 17:11:38 2017 -0600
+
+    Made Acceptance Tests
+
+commit 6aa7fabc16408f2be0ef6e1e0e138a5dae93d178
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sat Feb 11 11:42:43 2017 -0600
+
+    netflix.py working
+
+commit d4bd416b02f1683fdb74dd57863eb6fc275abdae
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Feb 9 00:26:39 2017 -0600
+
+    modified netflix_eval
+
+commit 05f7cd486b8b21271690b920c0821e266b18c9cf
+Author: Ellen Wyllie <ellen@cs.utexas.edu>
+Date:   Tue Feb 7 16:52:53 2017 -0600
+
+    broken code
+
+commit c62cc2db35e67a9bcdd919fa0455d4d4ef7be0c6
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Tue Feb 7 12:30:35 2017 -0600
+
+    pushing
+
 commit 80ed1ed1fd378b702d16f1579d99a82769221d15
 Author: Drew Wagner <drew_wagner@utexas.edu>
 Date:   Tue Feb 7 12:03:11 2017 -0600
