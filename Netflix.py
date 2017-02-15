@@ -61,6 +61,10 @@ for item in ACTUAL_CUSTOMER_RATING.items():
 # ------------
 
 def netflix_eval(reader, writer) :
+    """ 
+    compares user ratings to predictions and returns root mean squared error
+    writes predictions and overall error to file 
+    """
     predictions = []
     actual = []
 
